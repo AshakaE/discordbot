@@ -59,4 +59,3 @@ export BOT_TOKEN=REPLACE_THIS_WITH_YOUR_BOT_TOKEN
 ```bash
 npm run serve
 ```
-
