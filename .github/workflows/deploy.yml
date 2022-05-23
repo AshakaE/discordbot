@@ -17,8 +17,8 @@ jobs:
       - name: check env
         run: echo ${{secrets.PASSWORD}}
 
-      - name: SSH Remote Commands
-        uses: appleboy/ssh-action@master
+      - name: Node VPS Deployment
+        uses: Techie-Pi/node-vps-deployment@v1.1
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
@@ -29,4 +29,3 @@ jobs:
             git pull
             npm i
             pm2 update
-
