@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'brainbot',
+      name: 'discordbot',
       script: 'npm run serve',
       watch: true,
     },
