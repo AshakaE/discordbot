@@ -8,6 +8,12 @@ jobs:
   launch-bot:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.4
+        with:
+          cache: npm
+          cache-dependency-path: package-lock.json
+          node-version: 16
 
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@master
