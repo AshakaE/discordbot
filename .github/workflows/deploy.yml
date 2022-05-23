@@ -9,12 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Installing dependencies
-        run: npm install          
-
-      - name: Build
-        run: npm run build
-
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v0.1.4
         with:
