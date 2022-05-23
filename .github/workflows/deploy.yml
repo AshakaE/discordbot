@@ -17,6 +17,7 @@ jobs:
 
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@master
+        run: echo $PASSWORD
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
