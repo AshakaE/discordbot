@@ -10,12 +10,7 @@ jobs:
     steps:
 
       - name: Installing dependencies
-        run: |
-          if [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
+        run: npm install          
 
       - name: Build
         run: npm run build
