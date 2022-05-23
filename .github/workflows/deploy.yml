@@ -10,14 +10,14 @@ jobs:
     steps:
 
       - name: SSH Remote Commands
-        uses: appleboy/ssh-action@v0.1.4
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.KEY }}
           script: |
-            cd brainbot
+            cd discordbot
             git pull
             npm i
             pm2 update
