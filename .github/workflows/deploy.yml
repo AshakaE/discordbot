@@ -14,10 +14,11 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
           node-version: 16
+      - name: check env
+        run: echo $PASSWORD
 
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@master
-        run: echo $PASSWORD
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
