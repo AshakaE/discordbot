@@ -25,9 +25,13 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           key: ${{ secrets.KEY }}
-          password: ${{ secrets.PASSWORD }}
           username: ${{ secrets.USERNAME }}
-          script: |
-            cd discordbot
-            git pull
-            npm i
+          envs:
+            host: ${{ secrets.HOST }}
+            key: ${{ secrets.KEY }}
+            username: ${{ secrets.USERNAME }}
+            script: |
+              cd discordbot
+              git pull
+              npm i
+
