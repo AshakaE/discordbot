@@ -17,8 +17,8 @@ jobs:
       - name: check env
         run: echo ${{secrets.PASSWORD}}
 
-      - name: Node VPS Deployment
-        uses: Techie-Pi/node-vps-deployment@v1.1
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
