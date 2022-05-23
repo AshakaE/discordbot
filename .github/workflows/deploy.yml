@@ -31,4 +31,3 @@ jobs:
             cd discordbot
             git pull
             npm i
-            pm2 update
