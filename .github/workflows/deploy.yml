@@ -14,8 +14,11 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
           node-version: 16
-      - name: check env
-        run: echo blud
+          
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
 
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@master
