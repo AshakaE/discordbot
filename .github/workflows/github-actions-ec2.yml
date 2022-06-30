@@ -2,8 +2,8 @@ name: Push-to-EC2
 
 # Trigger deployment only on push to master branch
 on: [push, workflow_dispatch]
-    branches:
-      - main
+  branches:
+    - main
 
 jobs:
   deploy:
@@ -11,13 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the files
-        uses: actions/checkout@v2
+    - name: Run script
+      run: echho Hello world!
 
-      - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
+    # steps:
+    #   - name: Checkout the files
+    #     uses: actions/checkout@v2
+
+    #   - name: Deploy to Server 1
+    #     uses: easingthemes/ssh-deploy@main
+    #     env:
+    #       SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+    #       REMOTE_HOST: ${{ secrets.HOST_DNS }}
+    #       REMOTE_USER: ${{ secrets.USERNAME }}
+    #       TARGET: ${{ secrets.TARGET_DIR }}
