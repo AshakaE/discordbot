@@ -49,7 +49,7 @@ jobs:
         run: echo Hello world!
 
   my_job:
-    name: "My job my_value: "${{ github.event.workflow_dispatch.inputs.my_value }}
+    name: ${{ github.event.workflow_dispatch.inputs.my_value }}
     runs-on: ubuntu-latest
     if: ${{ github.event != github.event.push }}
     steps:
