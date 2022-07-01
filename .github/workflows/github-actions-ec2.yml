@@ -4,6 +4,7 @@ name: Push-to-EC2
 on:
   workflow_dispatch:
     ref: 'new'
+    inputs:
       my_value:
           description: 'My input value'
           required: true
