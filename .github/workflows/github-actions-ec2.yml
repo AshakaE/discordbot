@@ -2,12 +2,14 @@ name: Push-to-EC2
 
 # Trigger deployment only on push to master branch
 on: 
+  
+  workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run 2nd script
+        run: echo 'The triggering workflow passed'
   push:
-  workflow_run:
-    workflows: [Build]
-    types: [completed]
-    branches: [main]
-
+  
 jobs:
   deploy:
     name: Deploy to EC2 on master branch push
@@ -17,12 +19,6 @@ jobs:
       - name: Run script
         run: echo Hello world!
 
-  on-success:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.push.conclusion == 'success' }}
-    steps:
-      - name: Run 2nd script
-        run: echo 'The triggering workflow passed'
 
     
 
