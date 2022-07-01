@@ -3,7 +3,7 @@ name: Push-to-EC2
 # Trigger deployment only on push to master branch
 on:
   workflow_dispatch:
-    ref: 'new'
+    branch: new
     inputs:
       my_value:
           description: 'My input value'
