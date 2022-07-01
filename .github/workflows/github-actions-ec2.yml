@@ -8,7 +8,7 @@ on:
     inputs:
       my_value:
           description: 'My input value'
-          required: true
+          required: false
           default: 'foo'
           type: string 
   push:
@@ -51,7 +51,6 @@ jobs:
   my_job:
     name: ${{ github.event.workflow_dispatch.inputs.my_value }}
     runs-on: ubuntu-latest
-    if: ${{ github.event != github.event.push }}
     steps:
       - name: Run 2 script
         run: echo Hello 2 world!
