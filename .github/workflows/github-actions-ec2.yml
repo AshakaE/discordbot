@@ -21,7 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.push.conclusion == 'success' }}
     steps:
-    - run: echo 'The triggering workflow passed'
+      - name: Run 2nd script
+        run: echo 'The triggering workflow passed'
 
     
 
