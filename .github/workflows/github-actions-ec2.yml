@@ -2,14 +2,14 @@ name: Push-to-EC2
 
 # Trigger deployment only on push to master branch
 on: 
-  
+  push:
   workflow_dispatch:
     runs-on: ubuntu-latest
     steps:
       - name: Run 2nd script
         run: echo 'The triggering workflow passed'
-  push:
   
+
 jobs:
   deploy:
     name: Deploy to EC2 on master branch push
