@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run 2 script
-        run: echo ${{  github.event.inputs.my_value.description }}
+        run: echo ${{  github.event.inputs }}
   # log-the-inputs:
   #   runs-on: ubuntu-latest
   #   steps:
