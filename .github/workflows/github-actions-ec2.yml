@@ -48,12 +48,13 @@ jobs:
       - name: Run script
         run: echo Hello world!
 
+
   my_joob:
     name: ${{  github.event.inputs.my_value.description }}
     runs-on: ubuntu-latest
     steps:
       - name: Run 2 script
-        run: echo Hello 2 world!
+        run: echo ${{  github.event.inputs.my_value.description }}
   # log-the-inputs:
   #   runs-on: ubuntu-latest
   #   steps:
